@@ -35,7 +35,7 @@ addBtn.addEventListener('click', () => {
   const newBook = new Book(inpTitle.value, inpAuthor.value);
   bookDatas.push(newBook);
   generateNewBook(bookDatas.length - 1);
-  localStorage.setItem('bookDatas', JSON.stringify(bookDatas));
+  localStorage.setItem('stored ', JSON.stringify(bookDatas));
 });
 removeBook();
 
@@ -50,3 +50,6 @@ window.addEventListener('load', () => {
     loadedData = [];
   }
 });
+
+//if theres nothing filled in the inputs do not submit
+// if the input is similar to one of the object alredy pushed in the array display a message
